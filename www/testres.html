@@ -28,7 +28,7 @@
     </div>
     <section>
         <contet>
-            <quest> Вы похожи на Самого Себя. Шанс суицида =</quest>
+            <quest> Вы похожи на Самого Себя. Шанс круто провести день =</quest>
             <quest id='q'></quest>
             <quest> %</quest>
             <p></p>
@@ -69,7 +69,7 @@
                         return Math.floor(Math.random() * (max - min + 1)) + min;
                     }
 
-                    document.getElementById('q').innerHTML = getRandom(0, 148);
+                    document.getElementById('q').innerHTML = getRandom(100, 228);
 
                     let res = getRandom(2, 11);
                     let ans = ('<img src="memes/' + res + '.png" width=' + wh[res-1][0] + ' height='+wh[res-1][1] +' alt="" />');

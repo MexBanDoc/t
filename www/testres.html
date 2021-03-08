@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>W</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <a><img src="images/n.png" alt=""></a>
+    </header>
+    <nav>
+        <ul class="top-menu">
+            <li><a href=index.html>Поздравление!</a></li>
+            <li><a href=test10.html>Пройти тест</a></li>
+            <li class=active><a class="active">Посмотреть результаты</a></li>
+            <li><a href=index.html id="noLink2">Войти в аккаунт</a></li>
+        </ul>
+    </nav>
+    <div id="heading">
+        <h1></h1>
+    </div>
+    <section>
+        <contet>
+            <quest> Вы похожи на Самого Себя. Шанс суицида =</quest>
+            <quest id='q'></quest>
+            <quest> %</quest>
+            <p></p>
+            <quest> Лови мем от нас под конец:</quest>
+            <p></p>
+            <figure>
+                <div id="tekst"></div>
+                <div id="pic"></div>
+                <script>
+                    let arr = ['',
+                        'Совмести приятное с полезным',
+                        ' Давно мечтаешь об отпуске? Это твой шанс!',
+                        'Не грусти, крошка! Лови букетик для настроения',
+                        'Тебе выпал приз! Поездка в Турцию на двоих с',
+                        'Знай, что ты',
+                        ' Ты знала, что женщины тоже служат?',
+                        'А шо с лицом?',
+                        'Тебе нужен массаж. А ему нужна ты',
+                        ' Вы прошли тест на беременность. Поздравляем, вы будущая мать!',
+                        'Думаешь, ты тут навеселе? После чая с малинкой ещё не то бывает)'
+                    ];
+
+                    let wh = [['0','0'],
+                        ['300','203'],
+                        ['300','212'],
+                        ['300','300'],
+                        ['300','200'],
+                        ['300','200'],
+                        ['300','200'],
+                        ['300','400'],
+                        ['300','400'],
+                        ['300','475'],
+                        ['300','465']
+                    ];
+
+
+                    function getRandom(min, max) {
+                        return Math.floor(Math.random() * (max - min + 1)) + min;
+                    }
+
+                    document.getElementById('q').innerHTML = getRandom(0, 148);
+
+                    let res = getRandom(2, 11);
+                    let ans = ('<img src="memes/' + res + '.png" width=' + wh[res-1][0] + ' height='+wh[res-1][1] +' alt="" />');
+                    document.getElementById('pic').innerHTML = ans;
+                    document.getElementById('tekst').innerHTML = ('<label_meme>' + arr[res-1] + '</label_meme>');
+                </script>
+            </figure>
+
+            <p></p>
+            <div id="but2">
+                <button><a href=index.html>На главную</a></button>
+            </div>
+
+        </contet>
+        <!--<h2>Наша Команда</h2>
+        <div class="team-row">
+            <figure>
+                <img src="images/Nikijan.png" width="96" height="96" alt="">
+                <figcaption>Никита Девяткин<span>Главный в пати</span></figcaption>
+            </figure>
+            <figure>
+                <img src="images/Koljan.png" width="96" height="96" alt="">
+                <figcaption>Николай Силаев<span>Главный в зале</span></figcaption>
+            </figure>
+            <figure>
+                <img src="images/Timojan.png" width="96" height="96" alt="">
+                <figcaption>Тимофей Белов<span>Просто главный</span></figcaption>
+            </figure>
+        </div>-->
+    </section>
+</div>
+<footer>
+    <div id="footer">
+    </div>
+</footer>
+</body>
+</html>
